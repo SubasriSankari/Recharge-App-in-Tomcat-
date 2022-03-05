@@ -1,0 +1,88 @@
+<html>										
+	<head>										
+		<style>										
+
+		.preloader{										
+		 	display: inline-block;								
+		 }											
+
+		.preloader span{									
+		 	width:10px;									
+			height:10px;									
+			display:inline-block;								
+			background:blue;								
+			border-radius:100%;								
+			-webkit-animation:preloader 1s linear infinite alternate;			
+			-o-animation:preloader 1s linear infinite alternate;				
+			animation:preloader 1s linear infinite alternate;				
+		}											
+				
+		.preloader span:nth-child(1){								
+		 	animation-delay:0.2s;								
+		}											
+				
+		.preloader span:nth-child(2){								
+			animation-delay:0.5s;								
+		}											
+		
+		.preloader span:nth-child(3){								
+			animation-delay:0.8s;								
+		}											
+						
+		@keyframes preloader{									
+			from{ transform: scale(0);}							
+			to{ transform: scale(1);}							
+		}											
+		</style>										
+	
+	 <script type="text/javascript">							
+		var x = 0;										
+		var webSocket= new WebSocket("ws://localhost:8080/Recharge_App/websocketendpoint"); 
+		webSocket.onopen = function(message){ wsOpen(message);};				
+		webSocket.onmessage = function(message){ wsGetMessage(message);};			
+		webSocket.onclose = function(message){ wsClose(message);};				
+		webSocket.onError = function(message){ wsError(message);};				
+
+		function wsOpen(message){								
+			console.log("open connection" );						
+			webSocket.send("this is server");						
+			event.preventDefault();								
+		}											
+
+		function wsGetMessage(message){							
+			var value = message.data;							
+			console.log(value);								
+			if(value.localeCompare(false)){							
+				window.location.href='IndividualDisplay';				
+				event.preventDefault();							
+			}										
+			else {										
+				window.location.href='ExpiredPage';					
+				event.preventDefault();							
+			}										
+		}											
+			
+		function wsClose(message){								
+		 	console.log("close connection" );						
+			event.preventDefault();								
+		}											
+				
+		function wsError(message){								
+			console.log("Error page" );							
+			event.preventDefault();								
+		}											
+				
+	</script>										
+	</head>										
+	<body>										
+		<center>										
+		<h3>We sent a mail to your registered gmail. Please click on link to proceed further!!</h3><br>									
+		<h4>Waiting For Your Response 							
+		<div class="preloader">								
+		<span></span>										
+		<span></span>										
+		<span></span>										
+		</div></h4>										
+		</center>										
+	</body>										
+</html>													

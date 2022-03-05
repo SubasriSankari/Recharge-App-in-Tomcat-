@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style>
+
+.heading{
+	font-weight:bold;
+	font-size:40px;
+        background: linear-gradient(to bottom, #000099 0%, #ff0000 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+body{
+	background-image:url("https://www.hostirian.com/wp-content/uploads/2014/04/Admin.png");
+	background-repeat: no-repeat;
+	background-size: 100% 250%;
+	//background-position: center;
+	padding: 10px 10px;
+}
+.submitButton, .homeButton{
+	width: 80px;
+	height: 30px;
+	padding: 7px;
+	display: inline-block;
+	background: linear-gradient(to bottom, #00ffff 0%, #ffff00 100%);
+	background-color:#ccccff;
+	border-radius:10px;
+	font-size:15px;
+	text-align: center;
+	font-weight: bold;
+}
+label{
+	font-weight: bold;
+	font-family: system-ui;
+}
+input[type=text],input[type=password]{
+	border-radius : 10px;
+	background-image: linear-gradient(to right, pink , yellow);
+	padding: 4px 8px;
+	font-family: cursive;
+}
+
+</style>
+</head>
+
+<body >	
+	<center>
+		<form action = "AdminPage" method = "get">
+		<table>
+			<div class="heading"> Admin Login </div><br/>
+			<tr><td><label>UserName :</label> &nbsp  <input type = "text" name = "adminName" required ></td></tr>
+			<tr><td><label>Password &nbsp :</label> &nbsp <input type = "password" name = "adminPassword" required ></td></tr>
+			<tr><td><input type="checkbox" name="chk" required> I agree <label style="color:blue;font-size:15px;font-weight:bold;">terms& condition</label>
+			<tr><td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			
+			<div class="g-recaptcha" data-sitekey="6LdKP1YdAAAAAOOJiOV_i6e_JmaWNGHUtLtNFgpI"></div>
+			
+			<input type = "submit" name = "submit" value = "Submit" class="submitButton">&nbsp&nbsp&nbsp&nbsp
+			<button onclick = "window.location.href = 'index.html' " name="indexChoose" class="homeButton">Home</button></tr>
+		</table>
+		</form>
+	</center>
+	<script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
+	
+</body>
+</html>

@@ -1,0 +1,18 @@
+/*
+		out.println("<h1 style=\"text-align:center; font-weight:bold; color: blue; font-family: system-ui;\">User Details</h1>");
+
+		List<PersonalDetails> list = listAdded();
+		out.print("<table border='1' width='100%'>");  
+       		out.print("<tr><th>Serial Number</th><th>Name</th><th>Phone Number</th><th>Mail Id</th><th>Sim Name</th><th>Amount</th><th>Last Recharge Date</th><th>Expiry Date</th><th>Status</th></tr>");  
+ 		for(PersonalDetails element:list){      
+       			out.print("<tr><td>"+element.getSeriesNumber()+"</td><td>"+element.getUserName()+
+				"</td><td>"+element.getPhoneNumber()+"</td><td>"+element.getMailId()+
+				"</td><td>"+element.getSimName()+"</td><td>"+element.getAmount()+
+				"</td><td>"+element.getLastRechargeDate()+"</td><td>"+element.getExpiryDate()+
+				"</td><td>"+element.getStatus()+"</td></tr>"); 
+		}
+       		out.print("</table>"); 
+		out.print("<center>");
+		out.print("<p><input type=\"button\" onclick= \"window.location.href = 'admin.html' \"  value = \"Logout\" > </p>");
+		session.invalidate();
+		out.print("</center>");  */

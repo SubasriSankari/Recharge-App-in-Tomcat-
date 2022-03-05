@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript scratch card Example</title>
+
+
+	<!-- Demo CSS -->
+	<link rel="stylesheet" href="css/demo.css">
+    <style>
+        .card{
+         width: 300px;
+         height: 60px;
+         position: relative;
+         box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
+        margin: 10px auto;
+        }    
+        
+      .base, #scratch {
+        cursor: default;
+        height: 60px;
+        width: 300px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          cursor: grabbing;
+      }
+      .base {
+        line-height: 60px;
+        text-align: center;
+      }
+      #scratch {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+      }
+    </style>
+    
+</head>
+ <body>
+	<header class="intro">
+	<h1> JavaScript scratch card Example</h1>
+	<p>Scratch card sample, use native Canvas</p>
+	<p> Written in HTML, CSS and JavaScript... </p>
+	<div class="action">
+	<a href="https://www.codehim.com/others/create-scratch-card-using-javascript-html5-canvas/" title="Back to download and tutorial page" class="btn back">Back to Tutorial</a>
+	<a href="https://github.com/sasaplus1-prototype/scratch-card-with-canvas" title="View, Fork or Star on GitHub" class="btn github">View on GitHub</a>
+	</div>
+	</header>
+<main>
+ <article>
+	<p>The following is the example of JavaScript scratch card. Scratch it with touch or mouse.</p>
+    <div class="card">
+    <div class="base">Coupon Code: 123456789</div>
+    <canvas id="scratch" width="300" height="60"></canvas>
+    </div>
+         <h3> Status:</h3>
+          <dl class="state">
+      <dt>gray</dt>
+      <dd id="gray-count">?</dd>
+      <dt>erase</dt>
+      <dd id="erase-count">?</dd>
+    </dl>
+    </article>
+</main>
+
+<footer class="credit">Author: Prototype - Distributed By: <a title="Awesome web design code & scripts" href="https://www.codehim.com?source=demo-page" target="_blank">CodeHim</a></footer>
+
+<!-- scratch-card-with-canvas JS -->
+<script src="js/scratch-card.js"></script>
+     
+ </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<style>
+.text{
+	top:50%;
+	background: linear-gradient(to bottom, #000099 0%, #ff0000 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+form input {
+	width: 110px;
+	height: 30px;
+	padding: 7px;
+	display: inline-block;
+	background:linear-gradient(to bottom left, #0099ff 4%, #66ff33 92%);
+	background-color:#ccccff;
+	border-radius:10px;
+	font-size:15px;
+	text-align: center;
+	font-weight: bold;
+}
+.help{
+	position:absolute; 
+	top:0%; 
+	right:-1%;
+	width:100%;
+	text-align:left;
+	
+}
+body{
+	background-image:url("https://www.bankit.in/uploads/category/3014BankitRechargeImage.png");
+	background-repeat: no-repeat;
+	background-size: 70%;
+}
+
+img.callImage{
+	vertical-align:text-bottom;
+}
+
+</style>
+
+</head>
+
+<body>
+	
+	<center>
+	<div class="help" style="font-weight:bold">Contact Us</div>
+	<div class="help" style="top:4%;font-size:13px;"> <img src="https://png.pngtree.com/element_our/png/20180905/call-icon-png-png_87589.jpg" class="callImage" width="20" height="20"> 044-2244 2244 </div><br/>
+	<div class="help" style="top:7%;font-size:13px;"> <img src="https://3.bp.blogspot.com/-O231QKWcdH0/VGIFcFuWo5I/AAAAAAAAPnE/S3a8H6twUoE/s1600/logo_gmail_color_112in128dp.png" class="callImage" width="20" height="15"> helprechargeapp@gmail.com </div>
+	<h1 align="center" class="text"> Welcome to Recharge App </h1>
+	<form>
+		<td> <input type="button" onclick="adminCall()" name="submit" value = "Admin"> </td>
+		
+	</form>
+	<br/>
+	<form>
+		
+		<td> <input type="button" onclick="individualCall()" name="submit" value = "Individual"> </td>
+	</form>
+	</center>
+	<script>
+		function adminCall(){
+			window.location.href = "admin.html";
+		}
+		function individualCall(){
+			window.location.href = "individual.html";
+		}
+	</script>
+	
+</body>
+</html>

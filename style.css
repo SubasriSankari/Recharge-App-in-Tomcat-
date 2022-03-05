@@ -1,0 +1,25 @@
+    .card{
+         width: 300px;
+         height: 60px;
+         position: relative;
+         box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
+        }    
+        
+      .base, #scratch {
+        cursor: default;
+        height: 60px;
+        width: 300px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          
+      }
+      .base {
+        line-height: 60px;
+        text-align: center;
+      }
+      #scratch {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+      }

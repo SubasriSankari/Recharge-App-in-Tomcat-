@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style>
+body{
+	background-image:url("https://media.istockphoto.com/photos/close-up-of-girl-hold-bank-card-and-type-on-laptop-picture-id1257791022?b=1&k=20&m=1257791022&s=170667a&w=0&h=gb3vWFYBPlAEUWzmwYt0sHSSAng0pUcAqwEI_rbZplM=");
+	background-repeat: no-repeat;
+	background-size: 100% 400%;
+}
+h1{
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+	top: 20%;
+	background: linear-gradient(to top right, #000099 0%, #ff0066 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+p{
+	font-weight: bold;
+	font-family: cursive;
+}
+select{
+	border: none;
+	outline: none;
+	height: 30px;
+	background: linear-gradient(to right, #00ffcc 0%, #ffff00 101%);
+	color: black;
+	font-size: 15px;
+	border-radius: 20px;
+	font-family: system-ui;
+}
+
+button,input[type="button"]{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: linear-gradient(to top right, #ffff00 0%, #cc0000 100%);
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+	font-weight: bold;
+	
+}
+
+</style>
+</head>
+
+<body>
+	
+	<center>
+	<form action='#' method="get">
+		<h1> Payment Process </h1>
+		<p>Make Payment:</p>
+		<select id = "choosePayment" name="ChoosePayment" onchange="chooseOption(this)">
+			<option value="choose" selected>Choose</option>
+			<option value="cards">CARDS</option>
+			<option value="netBanking">NET BANKING</option>
+			<option value="cashCard/Wallet">CASH CARD/WALLET</option>
+		</select><br><br>
+		<button type="submit" onclick="verifySelect()" id="myBtn">Pay Now</button>
+
+		<a href="Cancel" name="cancel">Cancel</a>
+		
+	</form>
+	</center>
+	<script type="text/javascript">
+		var chooseValue = "choose";
+
+		function chooseOption(sel){
+			chooseValue = sel.value;
+		}
+		
+		function verifySelect(){
+			console.log("value "+chooseValue);
+			if(!chooseValue.localeCompare("choose"))
+			{
+				alert("Please Choose the option!!");
+				event.preventDefault();
+			}
+			else{
+				window.location.href = "VerifyMail";
+				event.preventDefault();
+			}
+		}
+	</script>
+	
+</body>
+</html>

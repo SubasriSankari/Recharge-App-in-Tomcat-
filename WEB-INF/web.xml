@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_4_0.xsd">
+
+
+  <filter>
+        <filter-name>filterForAdminLogin</filter-name>
+        <filter-class>FilterForAdminLogin</filter-class>
+  </filter>
+
+  <filter-mapping>
+        <filter-name>filterForAdminLogin</filter-name>
+        <url-pattern>/AdminPage</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+	<servlet-name>adding</servlet-name>
+	<servlet-class>AddingUser</servlet-class>
+  </servlet>
+
+  <servlet>
+	<servlet-name>admin</servlet-name>
+	<servlet-class>Admin</servlet-class>
+  </servlet>
+  
+  <servlet>
+	<servlet-name>browsePlan</servlet-name>
+	<servlet-class>BrowsePlanCheck</servlet-class>
+  </servlet>
+
+  <servlet>
+	<servlet-name>cancel</servlet-name>
+	<servlet-class>Cancel</servlet-class>
+  </servlet>
+ 
+  <servlet>
+	<servlet-name>check</servlet-name>
+	<servlet-class>CheckLogin</servlet-class>
+  </servlet>
+
+  <servlet>
+	<servlet-name>expire</servlet-name>
+	<servlet-class>ExpiredPage</servlet-class>
+  </servlet>
+
+  <servlet>
+	<servlet-name>individualDisplay</servlet-name>
+	<servlet-class>IndividualDisplay</servlet-class>
+  </servlet>
+  
+  <servlet>
+	<servlet-name>individualError</servlet-name>
+	<servlet-class>IndividualError</servlet-class>
+  </servlet>
+  
+  <servlet>
+	<servlet-name>gmail</servlet-name>
+	<servlet-class>GmailVerify</servlet-class>
+  </servlet>
+
+  <servlet>
+	<servlet-name>google</servlet-name>
+	<servlet-class>GoogleAuthenticator</servlet-class>
+  </servlet>
+
+  <servlet>
+	<servlet-name>login</servlet-name>
+	<servlet-class>LoginPage</servlet-class>
+  </servlet>
+
+  <servlet>
+	<servlet-name>verified</servlet-name>
+	<servlet-class>Verified</servlet-class>
+  </servlet>
+
+  <servlet>
+	<servlet-name>verify</servlet-name>
+	<servlet-class>VerifyMail</servlet-class>
+  </servlet>
+
+  <servlet>
+	<servlet-name>process</servlet-name>
+	<servlet-class>Process</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+	<servlet-name>adding</servlet-name>
+	<url-pattern>/AddingUser</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+	<servlet-name>admin</servlet-name>
+	<url-pattern>/AdminPage</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+	<servlet-name>browsePlan</servlet-name>
+	<url-pattern>/BrowsePlanCheck</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+	<servlet-name>cancel</servlet-name>
+	<url-pattern>/Cancel</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+	<servlet-name>check</servlet-name>
+	<url-pattern>/CheckLogin</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+	<servlet-name>expire</servlet-name>
+	<url-pattern>/ExpiredPage</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+	<servlet-name>individualDisplay</servlet-name>
+	<url-pattern>/IndividualDisplay</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+	<servlet-name>individualError</servlet-name>
+	<url-pattern>/IndividualError</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+	<servlet-name>gmail</servlet-name>
+	<url-pattern>/GmailVerify</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+	<servlet-name>google</servlet-name>
+	<url-pattern>/GoogleAuthenticator</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+	<servlet-name>login</servlet-name>
+	<url-pattern>/LoginPage</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+	<servlet-name>verified</servlet-name>
+	<url-pattern>/Verified</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+	<servlet-name>verify</servlet-name>
+	<url-pattern>/VerifyMail</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+	<servlet-name>process</servlet-name>
+	<url-pattern>/Process</url-pattern>
+  </servlet-mapping>
+
+
+  <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+	<tracking-mode>COOKIE</tracking-mode>
+  </session-config>
+
+  <welcome-file-list>
+    <welcome-file>/index.html</welcome-file>
+  </welcome-file-list>
+  
+</web-app>
